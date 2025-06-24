@@ -662,13 +662,13 @@ function updateLatestWeight() {
     
     if (appState.weightEntries.length > 0) {
         const latest = appState.weightEntries[appState.weightEntries.length - 1];
-        if (latestWeightElement) latestWeightElement.textContent = `${latest.weight} lbs`;
+        if (latestWeightElement) latestWeightElement.textContent = `${latest.weight} kg`;
         
         const remaining = latest.weight - appState.goals.weightGoal;
         if (weightToGoalElement) weightToGoalElement.textContent = Math.abs(remaining).toFixed(1);
     }
     
-    if (goalWeightElement) goalWeightElement.textContent = `${appState.goals.weightGoal} lbs`;
+    if (goalWeightElement) goalWeightElement.textContent = `${appState.goals.weightGoal} kg`;
 }
 
 function updateWeightChart() {
@@ -735,7 +735,7 @@ function updateWeightEntries() {
     entriesList.innerHTML = recentEntries.map(entry => `
         <div class="weight-entry-item">
             <span class="weight-entry-date">${new Date(entry.date).toLocaleDateString()}</span>
-            <span class="weight-entry-value">${entry.weight} lbs</span>
+            <span class="weight-entry-value">${entry.weight} kg</span>
         </div>
     `).join('');
 }
