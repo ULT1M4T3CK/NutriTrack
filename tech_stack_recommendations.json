@@ -1,0 +1,86 @@
+{
+  "Frontend_Framework": {
+    "React_Native": {
+      "pros": [
+        "Large community",
+        "Code reuse",
+        "Hot reload",
+        "Third-party libraries"
+      ],
+      "cons": [
+        "Bridge performance",
+        "Platform differences",
+        "Complex debugging"
+      ],
+      "best_for": [
+        "Rapid prototyping",
+        "Teams with React experience",
+        "Budget constraints"
+      ]
+    },
+    "Flutter": {
+      "pros": [
+        "Single codebase",
+        "High performance",
+        "Consistent UI",
+        "Growing ecosystem"
+      ],
+      "cons": [
+        "Newer framework",
+        "Larger app size",
+        "Limited native modules"
+      ],
+      "best_for": [
+        "Performance-critical apps",
+        "Custom UI requirements",
+        "Long-term projects"
+      ]
+    }
+  },
+  "Backend_Services": {
+    "Firebase": [
+      "Real-time database",
+      "Authentication",
+      "Cloud functions",
+      "Analytics"
+    ],
+    "Supabase": [
+      "PostgreSQL",
+      "Real-time subscriptions",
+      "Built-in auth",
+      "Open source"
+    ],
+    "AWS_Amplify": [
+      "GraphQL API",
+      "Serverless functions",
+      "S3 storage",
+      "Cognito auth"
+    ]
+  },
+  "State_Management": {
+    "React_Native": [
+      "Redux Toolkit",
+      "Zustand",
+      "React Query",
+      "Context API"
+    ],
+    "Flutter": [
+      "Provider",
+      "Riverpod",
+      "Bloc",
+      "GetX"
+    ]
+  },
+  "Chart_Libraries": {
+    "React_Native": [
+      "react-native-gifted-charts",
+      "Victory Native",
+      "react-native-chart-kit"
+    ],
+    "Flutter": [
+      "fl_chart",
+      "charts_flutter",
+      "syncfusion_flutter_charts"
+    ]
+  }
+}

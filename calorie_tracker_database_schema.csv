@@ -1,0 +1,75 @@
+Table,Column,Data Type,Description
+users,user_id,VARCHAR PRIMARY KEY,Column for User Id
+users,email,VARCHAR UNIQUE NOT NULL,Column for Email
+users,password_hash,VARCHAR NOT NULL,Column for Password Hash
+users,first_name,VARCHAR,Column for First Name
+users,last_name,VARCHAR,Column for Last Name
+users,date_of_birth,DATE,Column for Date Of Birth
+users,gender,VARCHAR,Column for Gender
+users,height,"DECIMAL(5,2)",Column for Height
+users,activity_level,VARCHAR,Column for Activity Level
+users,created_at,TIMESTAMP,Column for Created At
+users,updated_at,TIMESTAMP,Column for Updated At
+user_goals,goal_id,VARCHAR PRIMARY KEY,Column for Goal Id
+user_goals,user_id,VARCHAR FOREIGN KEY,Column for User Id
+user_goals,daily_calorie_target,INTEGER,Column for Daily Calorie Target
+user_goals,protein_percentage,"DECIMAL(5,2)",Column for Protein Percentage
+user_goals,fat_percentage,"DECIMAL(5,2)",Column for Fat Percentage
+user_goals,carb_percentage,"DECIMAL(5,2)",Column for Carb Percentage
+user_goals,weight_goal,"DECIMAL(5,2)",Column for Weight Goal
+user_goals,goal_type,VARCHAR,Column for Goal Type
+user_goals,created_at,TIMESTAMP,Column for Created At
+user_goals,updated_at,TIMESTAMP,Column for Updated At
+food_database,food_id,VARCHAR PRIMARY KEY,Column for Food Id
+food_database,name,VARCHAR NOT NULL,Column for Name
+food_database,brand,VARCHAR,Column for Brand
+food_database,barcode,VARCHAR,Column for Barcode
+food_database,calories_per_100g,INTEGER,Column for Calories Per 100G
+food_database,protein_per_100g,"DECIMAL(5,2)",Column for Protein Per 100G
+food_database,fat_per_100g,"DECIMAL(5,2)",Column for Fat Per 100G
+food_database,carbs_per_100g,"DECIMAL(5,2)",Column for Carbs Per 100G
+food_database,fiber_per_100g,"DECIMAL(5,2)",Column for Fiber Per 100G
+food_database,sugar_per_100g,"DECIMAL(5,2)",Column for Sugar Per 100G
+food_database,sodium_per_100g,"DECIMAL(5,2)",Column for Sodium Per 100G
+food_database,verified,BOOLEAN DEFAULT FALSE,Column for Verified
+food_database,created_at,TIMESTAMP,Column for Created At
+meal_categories,category_id,VARCHAR PRIMARY KEY,Column for Category Id
+meal_categories,name,VARCHAR NOT NULL,Column for Name
+meal_categories,order_index,INTEGER,Column for Order Index
+food_entries,entry_id,VARCHAR PRIMARY KEY,Column for Entry Id
+food_entries,user_id,VARCHAR FOREIGN KEY,Column for User Id
+food_entries,food_id,VARCHAR FOREIGN KEY,Column for Food Id
+food_entries,category_id,VARCHAR FOREIGN KEY,Column for Category Id
+food_entries,serving_size_grams,"DECIMAL(8,2)",Column for Serving Size Grams
+food_entries,calories_consumed,INTEGER,Column for Calories Consumed
+food_entries,protein_consumed,"DECIMAL(5,2)",Column for Protein Consumed
+food_entries,fat_consumed,"DECIMAL(5,2)",Column for Fat Consumed
+food_entries,carbs_consumed,"DECIMAL(5,2)",Column for Carbs Consumed
+food_entries,entry_date,DATE,Column for Entry Date
+food_entries,entry_time,TIME,Column for Entry Time
+food_entries,created_at,TIMESTAMP,Column for Created At
+food_entries,updated_at,TIMESTAMP,Column for Updated At
+weight_entries,weight_id,VARCHAR PRIMARY KEY,Column for Weight Id
+weight_entries,user_id,VARCHAR FOREIGN KEY,Column for User Id
+weight_entries,weight_kg,"DECIMAL(5,2)",Column for Weight Kg
+weight_entries,body_fat_percentage,"DECIMAL(5,2)",Column for Body Fat Percentage
+weight_entries,muscle_mass_kg,"DECIMAL(5,2)",Column for Muscle Mass Kg
+weight_entries,entry_date,DATE,Column for Entry Date
+weight_entries,notes,TEXT,Column for Notes
+weight_entries,created_at,TIMESTAMP,Column for Created At
+user_preferences,preference_id,VARCHAR PRIMARY KEY,Column for Preference Id
+user_preferences,user_id,VARCHAR FOREIGN KEY,Column for User Id
+user_preferences,unit_system,VARCHAR,Column for Unit System
+user_preferences,notification_enabled,BOOLEAN DEFAULT TRUE,Column for Notification Enabled
+user_preferences,reminder_times,JSON,Column for Reminder Times
+user_preferences,theme,VARCHAR DEFAULT 'light',Column for Theme
+user_preferences,language,VARCHAR DEFAULT 'en',Column for Language
+user_preferences,privacy_settings,JSON,Column for Privacy Settings
+user_preferences,updated_at,TIMESTAMP,Column for Updated At
+api_logs,log_id,VARCHAR PRIMARY KEY,Column for Log Id
+api_logs,user_id,VARCHAR FOREIGN KEY,Column for User Id
+api_logs,api_endpoint,VARCHAR,Column for Api Endpoint
+api_logs,request_data,JSON,Column for Request Data
+api_logs,response_data,JSON,Column for Response Data
+api_logs,status_code,INTEGER,Column for Status Code
+api_logs,timestamp,TIMESTAMP,Column for Timestamp

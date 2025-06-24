@@ -1,0 +1,40 @@
+{
+  "nutrition_api_request": {
+    "endpoint": "https://api.api-ninjas.com/v1/nutrition",
+    "method": "GET",
+    "headers": {
+      "X-Api-Key": "YOUR_API_KEY"
+    },
+    "query_params": {
+      "query": "1 cup cooked brown rice"
+    },
+    "sample_response": {
+      "name": "brown rice",
+      "calories": 216,
+      "serving_size_g": 195,
+      "fat_total_g": 1.8,
+      "fat_saturated_g": 0.4,
+      "protein_g": 5.0,
+      "sodium_mg": 10,
+      "potassium_mg": 84,
+      "cholesterol_mg": 0,
+      "carbohydrates_total_g": 45,
+      "fiber_g": 3.5,
+      "sugar_g": 0.7
+    }
+  },
+  "barcode_scan_request": {
+    "endpoint": "https://platform.fatsecret.com/rest/food",
+    "method": "GET",
+    "params": {
+      "method": "food.find_id_for_barcode",
+      "barcode": "012000073137",
+      "format": "json"
+    },
+    "sample_response": {
+      "food_id": "33691",
+      "food_name": "Coca-Cola Classic",
+      "brand_name": "Coca-Cola"
+    }
+  }
+}
