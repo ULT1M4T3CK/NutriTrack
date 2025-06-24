@@ -168,7 +168,7 @@ const WeightScreen = () => {
 
         {/* Current Weight Input */}
         <View style={styles.weightInputContainer}>
-          <Text style={styles.inputLabel}>Current Weight (lbs)</Text>
+          <Text style={styles.inputLabel}>Current Weight (kg)</Text>
           <TextInput
             style={styles.weightInput}
             value={weight}
@@ -183,7 +183,7 @@ const WeightScreen = () => {
 
         {/* Goal Weight */}
         <View style={styles.goalContainer}>
-          <Text style={styles.goalLabel}>Goal Weight: {goalWeight} lbs</Text>
+          <Text style={styles.goalLabel}>Goal Weight: {goalWeight} kg</Text>
           <TouchableOpacity style={styles.editGoalButton}>
             <Text style={styles.editGoalText}>Edit Goal</Text>
           </TouchableOpacity>
@@ -203,7 +203,7 @@ const WeightScreen = () => {
           {weightHistory.slice(-5).reverse().map((entry, index) => (
             <View key={index} style={styles.historyItem}>
               <Text style={styles.historyDate}>{entry.date}</Text>
-              <Text style={styles.historyWeight}>{entry.weight} lbs</Text>
+              <Text style={styles.historyWeight}>{entry.weight} kg</Text>
             </View>
           ))}
         </View>
