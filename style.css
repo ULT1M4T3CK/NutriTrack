@@ -694,6 +694,24 @@ body {
   height: 40px;
   width: auto;
   object-fit: contain;
+  background: transparent;
+  border-radius: var(--radius-base);
+  /* Remove any white background from the image */
+  mix-blend-mode: multiply;
+  filter: contrast(1.1);
+}
+
+/* Dark mode logo adjustments */
+@media (prefers-color-scheme: dark) {
+  .logo-image {
+    mix-blend-mode: screen;
+    filter: contrast(1.2) brightness(1.1);
+  }
+}
+
+[data-color-scheme="dark"] .logo-image {
+  mix-blend-mode: screen;
+  filter: contrast(1.2) brightness(1.1);
 }
 
 .nav-logo h1 {
