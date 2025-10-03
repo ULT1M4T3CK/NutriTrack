@@ -541,7 +541,7 @@ function updateCalorieProgressChart(consumed) {
         data: {
             datasets: [{
                     data: [consumed || 0, remaining],
-                backgroundColor: ['#1FB8CD', '#ECEBD5'],
+                backgroundColor: ['#4CAF50', '#E8F5E8'],
                 borderWidth: 0
             }]
         },
@@ -590,7 +590,7 @@ function updateMacroChart(protein, fat, carbs) {
             labels: ['Protein', 'Fat', 'Carbs'],
             datasets: [{
                 data: [proteinCals, fatCals, carbsCals],
-                backgroundColor: ['#1FB8CD', '#FFC185', '#B4413C'],
+                backgroundColor: ['#4CAF50', '#FF9800', '#2196F3'],
                 borderWidth: 0
             }]
         },
@@ -902,14 +902,14 @@ function updateWeightChart() {
             datasets: [{
                 label: 'Weight',
                 data: weights,
-                borderColor: '#1FB8CD',
-                backgroundColor: 'rgba(31, 184, 205, 0.1)',
+                borderColor: '#4CAF50',
+                backgroundColor: 'rgba(76, 175, 80, 0.1)',
                 tension: 0.3,
                 fill: true
             }, {
                 label: 'Goal',
                 data: goalLine,
-                borderColor: '#B4413C',
+                borderColor: '#F44336',
                 borderDash: [5, 5],
                 fill: false
             }]
